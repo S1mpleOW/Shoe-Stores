@@ -1,0 +1,56 @@
+.card {
+	position: relative;
+	cursor: pointer;
+}
+.card:hover .card-content {
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.card-content {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease-in;
+	background: linear-gradient(to top, rgba(237, 163, 181, 0.8), rgba(27, 36, 55, 0.8));
+}
+
+.card-content * {
+	height: unset !important;
+}
+
+.slides {
+	position: relative;
+}
+.slick-list {
+	@apply rounded-xl;
+}
+.slick-slider,
+.slick-list,
+.slick-list * {
+	height: 100%;
+}
+
+.slick-prev,
+.slick-next {
+	z-index: 2;
+}
+
+.slick-prev::before,
+.slick-next::before {
+	font-size: 30px !important;
+}
+.slick-prev {
+	left: 10px !important;
+}
+.slick-next {
+	right: 20px !important;
+}

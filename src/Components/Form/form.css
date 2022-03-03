@@ -1,0 +1,62 @@
+.classOr {
+	position: relative;
+}
+.classOr::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	width: 100px;
+	height: 1px;
+	background-color: #eda3b5;
+}
+.classOr::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	transform: translateY(-50%);
+	width: 100px;
+	height: 1px;
+	background-color: #eda3b5;
+}
+
+.sign-out::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: calc(100% + 20px);
+	height: 10px;
+	background-color: transparent;
+}
+.sign-out-btn * {
+	pointer-events: none;
+}
+.sign-out .sign-out-btn {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.sign-out:hover .sign-out-btn {
+	opacity: 1;
+	visibility: visible;
+}
+
+@media screen and (max-width: 767.98px) {
+	.classOr::after {
+		width: 80px;
+	}
+	.classOr::before {
+		width: 80px;
+	}
+}
+@media screen and (max-width: 374.98px) {
+	.classOr::after {
+		width: 60px;
+	}
+	.classOr::before {
+		width: 60px;
+	}
+}
